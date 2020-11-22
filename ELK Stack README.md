@@ -101,7 +101,9 @@ SSH into the control node and follow the steps below:
 - Update the /etc/hosts file to include the below under the # Ex 2: A collection of hosts belonging to the 'webservers' group:
 
   [webservers]
-   10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-   10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+  
+  10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+  
+  10.0.0.6 ansible_python_interpreter=/usr/bin/python3
 
 - Run the playbook, and navigate to 168.61.191.39:5601/app/kibana#/home to check that the installation worked as expected.
