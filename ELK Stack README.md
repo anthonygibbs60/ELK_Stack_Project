@@ -4,9 +4,10 @@ The files in this repository were used to configure the network depicted below.
 ​
 ![](Diagrams/Red-Team_Network_Diagram.png)
 ​
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 ​
-  ![](Ansible/installation-elk.yml)
+  -[install-elk.yml](Ansible/installation-elk.yml)
 ​
 This document contains the following details:
 - Description of the Topology
@@ -31,6 +32,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 ​
 The configuration details of each machine may be found below.
 ​
+
 | Machine Name | Function   | Private IP Address | Public IP Address            | Operating System |
 |--------------|------------|--------------------|------------------------------|------------------|
 | Jump Box     | Gateway    | 10.0.0.4           | 104.40.62.127                | Linux            |
@@ -49,6 +51,7 @@ Machines within the network can only be accessed by the Jump Box via SSH.
 ​
 A summary of the access policies in place can be found in the table below.
 ​
+
 | Machine Name | Publicly Accessible | Allowed IP Addresses       |
 |--------------|---------------------|----------------------------|
 | Jump Box     | No                  | 10.0.0.5 10.0.0.6 10.1.0.4 |
@@ -69,7 +72,7 @@ The playbook implements the following tasks:
 ​
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![](Diagrams/docker_ps.PNG)
+![Docker ps](Diagrams/docker_ps.PNG)
 ​
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -84,11 +87,11 @@ These Beats allow us to collect the following information from each machine:
 
 -Filebeat collects and visualzes system logs into a user friendly GUI in Kibana. The visualized logs allow the user to easliy monitor system logs for irregularities that deviate in the system from normal traffic seen on the network. 
 
-![Filebeat Logs](Diagrams/filebeat.png)
+![Filebeat Logs](Diagrams/filebeat.PNG)
 ​
 -Metricbeat retrieves metric data from network machines such CPU and memory usage allowing users to ensure the network is running at optimal efficiency. Metricbeat can also be utilized as an IoC if irregularities are recorded in the monitored metrics.
 
-![Metricbeat Metrics](Diagrams/metricbeat.png)
+![Metricbeat Metrics](Diagrams/metricbeat.PNG)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
