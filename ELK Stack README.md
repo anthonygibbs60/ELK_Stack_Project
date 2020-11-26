@@ -10,6 +10,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   -[install-elk.yml](Ansible/installation-elk.yml)
 ​
+
 This document contains the following details:
 - Description of the Topology
 - Access Policies
@@ -23,14 +24,17 @@ This document contains the following details:
 ​
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 ​
+
 Load balancing ensures that the application will be highly secure, in addition to restricting traffic to the network.
 - Load balancers play a vital role in network security by detecting and preventing distributed denial-of-service (DDoS) before they can reach your network.
 - A jump box was utilized as the single access point for the network. The advantage of utilizing a jump box was ensuring only those with authorized access via the SSH key are able to access the network devices. 
 ​
+
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 - The first monitoring system utilized in the ELK stack was Filebeat. Filebeat monitors and indexes log files in a centralized location. 
 - The second monitoring system utilized in the ELK stack was Metricbeat. Metric beat was utilized to monitor and periodically collect key system metrics from the docker environments. 
 ​
+
 The configuration details of each machine may be found below.
 ​
 
@@ -45,11 +49,14 @@ The configuration details of each machine may be found below.
 ​
 The machines on the internal network are not exposed to the public Internet. 
 ​
+
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - Whitelisted IP: My personal machine's IP address. 
 ​
+
 Machines within the network can only be accessed by the Jump Box via SSH.
 ​
+
 A summary of the access policies in place can be found in the table below.
 ​
 
@@ -64,6 +71,7 @@ A summary of the access policies in place can be found in the table below.
 ​
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows administrators to automate the configuration of multiple machines added to the webservers group. 
 ​
+
 The playbook implements the following tasks:
 - Install docker.io 
 - Install python3-pip
